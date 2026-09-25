@@ -3,58 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Digital Seva — Online Document & Print Center</title>
-<meta name="description" content="Aadhaar, PAN, Ayushman, Voter ID, photo and PDF print tools.">
+<title>Digital Seva Center</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:#f4f7fb;color:#10235a}.topbar{height:70px;background:#fff;display:flex;align-items:center;gap:24px;padding:0 5%;box-shadow:0 2px 10px #0001;position:sticky;top:0;z-index:10}.brand{display:flex;gap:10px;align-items:center;margin-right:auto}.brand-icon{font-size:30px}.brand strong{display:block;font-size:24px;color:#0866d8}.brand small{color:#667085}.topbar nav{display:flex;gap:18px}.topbar nav a{text-decoration:none;color:#10235a}.wa{background:#09a85b;color:#fff!important;padding:11px 18px;border-radius:10px;text-decoration:none;font-weight:700}.hero{background:linear-gradient(120deg,#072b67,#075bd2);color:#fff;display:flex;justify-content:space-between;padding:55px 7%;min-height:370px}.hero-copy{max-width:720px}.eyebrow{font-size:13px;font-weight:700;letter-spacing:1px}.hero h1{font-size:48px;margin:15px 0}.hero p{font-size:20px}.search{display:flex;background:#fff;border-radius:12px;padding:5px;margin-top:25px;max-width:650px}.search input{flex:1;border:0;outline:0;padding:14px;font-size:16px}.search button{border:0;background:#0876e8;color:white;border-radius:9px;padding:0 24px;font-weight:700}.badges{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap}.hero-art{width:320px;position:relative}.fake-card{position:absolute;background:#fff;color:#111;padding:20px;border-radius:14px;width:220px;box-shadow:0 10px 30px #0004}.aad{top:20px;left:0}.pan{top:115px;right:0}.printer{position:absolute;bottom:0;right:60px;font-size:100px}.section{padding:40px 5%}.section-head{margin-bottom:22px}.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}.service-card{background:#fff;border-radius:14px;padding:18px;text-align:center;border:1px solid #e4e8f0;cursor:pointer;transition:.2s}.service-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #0001}.service-card .icon{font-size:38px}.service-card button{border:0;background:#eaf3ff;color:#0866d8;border-radius:8px;padding:8px 12px;font-weight:700}.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}.category-grid article{background:#fff;border-radius:16px;padding:20px;box-shadow:0 3px 12px #0000000d}.cat-icon{font-size:32px}.tool-section{padding:45px 5%;background:#eaf2fb}.tool-head{text-align:center;margin-bottom:25px}.tool-layout{display:grid;grid-template-columns:330px 1fr;gap:22px;max-width:1200px;margin:auto}.panel{background:#fff;border-radius:16px;padding:22px;box-shadow:0 5px 20px #0001}.controls label{display:block;font-weight:700;margin:14px 0 7px}.controls select,.controls input[type=file],.controls input[type=number],.page-range{width:100%;padding:10px;border:1px solid #ccd5e2;border-radius:8px;background:#fff}.file-note{font-size:12px;color:#667085;margin-top:7px}.copy-row{display:flex;gap:7px}.copy-row button{width:42px;border:0;border-radius:8px;background:#e9eef7;font-size:22px}.copy-row input{flex:1;text-align:center}.primary,.secondary{width:100%;border:0;padding:12px;border-radius:9px;margin-top:12px;font-weight:700;cursor:pointer}.primary{background:#0866d8;color:#fff}.secondary{background:#eef2f7;color:#182230}.preset-info{background:#f4f8ff;border-radius:10px;padding:12px;margin-top:14px;font-size:13px}.preview-title{display:flex;justify-content:space-between;font-weight:700;margin-bottom:12px}.a4{width:210mm;min-height:297mm;max-width:100%;margin:auto;background:#fff;box-shadow:0 5px 25px #0002;padding:10mm;display:flex;flex-wrap:wrap;align-content:flex-start;gap:5mm;overflow:hidden}.preview-item{display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fafafa;border:1px dashed #b9c2d0}.preview-item img{display:block;max-width:100%;max-height:100%;object-fit:contain}.pdf-page{width:100%;margin-bottom:4mm;text-align:center}.pdf-page canvas{max-width:100%;height:auto;display:block;margin:auto}.pdf-controls{background:#f7f9fc;padding:12px;border-radius:10px;margin-top:12px}.pdf-controls.hidden{display:none}.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.steps-grid>div{background:#fff;padding:18px;border-radius:14px}.steps-grid b{display:inline-flex;width:32px;height:32px;border-radius:50%;background:#0866d8;color:#fff;align-items:center;justify-content:center}.contact{background:#d8f8e8;padding:30px 6%;display:flex;align-items:center;gap:15px}.contact h2{margin:0}.phone{background:#fff;padding:12px 18px;border-radius:9px;color:#10235a;text-decoration:none;font-weight:700}footer{background:#fff;padding:30px 5%;display:flex;justify-content:space-between;gap:20px}.muted{color:#667085;font-size:13px}@media(max-width:800px){.topbar nav{display:none}.hero{padding:40px 5%}.hero h1{font-size:36px}.hero-art{display:none}.tool-layout{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}.contact,footer{flex-direction:column;align-items:flex-start}.a4{width:100%;min-height:auto;aspect-ratio:210/297}}
-@media print{body{background:#fff}.topbar,.hero,.section,.tool-head,.controls,.preview-title,.contact,footer,.steps{display:none!important}.tool-section{padding:0;background:#fff}.tool-layout{display:block}.preview-panel{box-shadow:none;padding:0}.a4{width:210mm;min-height:297mm;max-width:none;margin:0;box-shadow:none;padding:10mm;page-break-after:always}.a4:last-child{page-break-after:auto}.pdf-page{page-break-after:always}.pdf-page:last-child{page-break-after:auto}@page{size:A4;margin:0}}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f6f8fc;color:#182033}
+header{background:#fff;border-bottom:1px solid #e7eaf1;position:sticky;top:0;z-index:10}
+.wrap{max-width:1180px;margin:auto;padding:0 18px}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:23px;font-weight:800;color:#3b42c4}.nav a{margin-left:18px;text-decoration:none;color:#30374b}.btn{border:0;border-radius:10px;padding:11px 16px;background:#4f46e5;color:#fff;cursor:pointer;font-weight:700}
+.hero{padding:55px 0 38px;background:linear-gradient(135deg,#eef2ff,#f8fbff)}
+.hero h1{font-size:42px;margin:8px 0}.hero p{font-size:18px;color:#596176}.search{display:flex;max-width:700px;margin-top:25px;background:#fff;padding:7px;border-radius:14px;box-shadow:0 8px 30px #00000012}.search input{flex:1;border:0;outline:0;padding:14px;font-size:16px}
+section{padding:35px 0}.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.title h2{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:15px}.card{background:#fff;border:1px solid #e7eaf1;border-radius:16px;padding:20px;cursor:pointer;transition:.15s}.card:hover{transform:translateY(-2px);box-shadow:0 10px 25px #00000010}.icon{font-size:30px}.card h3{margin:10px 0 5px}.muted{color:#697187;font-size:14px}.price{font-weight:800;margin-top:10px}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:30;padding:25px;overflow:auto}.modalbox{max-width:760px;margin:30px auto;background:#fff;border-radius:18px;padding:24px}.close{float:right;background:#eee;border:0;border-radius:9px;padding:8px;cursor:pointer}.drop{border:2px dashed #b9c0d5;border-radius:14px;padding:30px;text-align:center;margin:18px 0}.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.controls label{font-size:13px;color:#596176}.controls input,.controls select{width:100%;padding:10px;border:1px solid #d8dce7;border-radius:9px;margin-top:5px}.preview{margin-top:18px;padding:18px;background:#f2f4f9;border-radius:12px;text-align:center}.admin{background:#111827;color:#fff}.admin .card{color:#182033}.hidden{display:none!important}
+footer{padding:35px 0;background:#151a2a;color:#dce1ee;margin-top:25px}
+@media(max-width:650px){.hero h1{font-size:31px}.nav a{display:none}.controls{grid-template-columns:1fr}.search{display:block}.search button{width:100%}}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="brand"><span class="brand-icon">▣</span><div><strong>Digital Seva</strong><small>All Documents & Print Solution</small></div></div><nav><a href="#home">Home</a><a href="#services">All Services</a><a href="#tools">Print Tools</a><a href="#contact">Contact</a></nav><a class="wa" href="https://wa.me/919876543210" target="_blank">WhatsApp</a></header>
-<main id="home">
-<section class="hero"><div class="hero-copy"><span class="eyebrow">FAST • EASY • PRINT READY</span><h1>Your One-Stop<br>Online Service Center</h1><p>Documents • Print • Photo • PDF • Online Forms</p><div class="search"><span>⌕</span><input id="search" placeholder="सेवा खोजें — जैसे Aadhaar, PAN, Photo..."><button onclick="filterServices()">Search</button></div><div class="badges"><span>✓ Correct Print Size</span><span>✓ PDF + Image Support</span><span>✓ Preview Before Print</span></div></div><div class="hero-art"><div class="fake-card aad">AADHAAR<br><b>1234 5678 9012</b></div><div class="fake-card pan">INCOME TAX DEPARTMENT<br><b>ABCDE1234F</b></div><div class="printer">🖨️</div></div></section>
-<section class="section" id="services"><div class="section-head"><h2>🔥 Popular Services</h2><p>Document चुनें और उसका print preset तैयार करें</p></div><div class="service-grid" id="serviceGrid"></div></section>
-<section class="section"><div class="section-head"><h2>All Categories</h2><p>अपनी जरूरत के अनुसार सेवा चुनें</p></div><div class="category-grid"><article><div class="cat-icon">🪪</div><h3>Government ID Cards</h3><p>Aadhaar, PAN, Voter, Ayushman, e-Shram, ABHA आदि</p></article><article><div class="cat-icon">📄</div><h3>Certificates & Documents</h3><p>Certificate, application, A4/A3 documents और forms</p></article><article><div class="cat-icon">📸</div><h3>Photo Services</h3><p>Passport, Stamp, Visa Photo, resize और background</p></article><article><div class="cat-icon">🖨️</div><h3>Print & Design</h3><p>Colour, B/W, poster, ID card और photo frame</p></article><article><div class="cat-icon">🌐</div><h3>Online Forms</h3><p>Scholarship, jobs, admission और government schemes</p></article><article><div class="cat-icon">🛠️</div><h3>Digital Tools</h3><p>PDF, image resize, QR code और document utilities</p></article></div></section>
-<section class="tool-section" id="tools"><div class="tool-head"><h2>🖨️ One-Click Document Print</h2><p>Image या <b>PDF</b> Upload करें → preset → Preview → Print / Save PDF</p></div><div class="tool-layout"><div class="panel controls"><label>1. Document / Photo Type</label><select id="preset" onchange="updatePreset()"></select><label>2. File Upload</label><input id="file" type="file" accept="image/*,.pdf,application/pdf" onchange="loadFile(event)"><div class="file-note">JPG/PNG और PDF दोनों upload कर सकते हैं। PDF के सभी selected pages preview और print होंगे।</div><div id="photoControls" class="pdf-controls hidden"><label>📸 Photo Background</label><select id="bgColor" onchange="applyPhotoEdits()"><option value="none">Original Background</option><option value="#ffffff">White</option><option value="#eaf4ff">Light Blue</option><option value="#dbeafe">Blue</option><option value="#f3f4f6">Light Grey</option><option value="#ef4444">Red</option></select><label>Background Edit</label><select id="bgMode" onchange="applyPhotoEdits()"><option value="solid">Background Color</option><option value="replace">Auto Replace Similar Background</option></select><div class="muted">Auto Replace simple backgrounds के लिए है; final photo official requirement के अनुसार check करें।</div></div><div id="pdfControls" class="pdf-controls hidden"><label>PDF Pages</label><input id="pageRange" class="page-range" placeholder="उदा. 1-3 या 1,3,5 (खाली = सभी)" onchange="renderPdf()"><div class="muted">Page range खाली छोड़ने पर सभी pages print होंगे।</div></div><label>3. Copies</label><div class="copy-row"><button onclick="changeCopies(-1)">−</button><input id="copies" value="1" inputmode="numeric"><button onclick="changeCopies(1)">+</button></div><div class="preset-info" id="presetInfo"></div><button class="primary" onclick="window.print()">🖨️ Print / Save PDF</button><button class="secondary" onclick="resetTool()">Reset</button></div><div class="panel preview-panel"><div class="preview-title"><span>Live Preview</span><span id="paperLabel">A4 • Portrait</span></div><div class="a4" id="a4"></div></div></div></section>
-<section class="steps section"><h2>⚙️ How It Works?</h2><div class="steps-grid"><div><b>1</b><h3>Upload</h3><p>JPG/PNG या PDF upload करें</p></div><div><b>2</b><h3>Preset</h3><p>Service का print layout select होगा</p></div><div><b>3</b><h3>Preview</h3><p>Print से पहले layout देखें</p></div><div><b>4</b><h3>Print / PDF</h3><p>सीधे A4 पर print या Save as PDF करें</p></div></div></section>
-<section class="contact" id="contact"><div><h2>किसी भी online काम के लिए संपर्क करें</h2><p>Call / WhatsApp / Visit Us</p></div><a class="wa big" href="https://wa.me/919876543210" target="_blank">WhatsApp Now</a><a class="phone" href="tel:+919876543210">+91 98765 43210</a></section>
-</main><footer><div class="brand"><span class="brand-icon">▣</span><div><strong>Digital Seva</strong><small>All Documents & Print Solution</small></div></div><div>© 2026 Digital Seva. All rights reserved.</div></footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
-<script>
-const presets={
- Aadhaar:{icon:'🪪',label:'Aadhaar Card',w:85.6,h:53.98,desc:'Card-size print preset. Verify official/current print requirements before production.'},
- PAN:{icon:'💳',label:'PAN Card',w:85.6,h:53.98,desc:'Card-size print preset.'},
- Ayushman:{icon:'🏥',label:'Ayushman Card',w:85.6,h:53.98,desc:'Card-size print preset.'},
- Voter:{icon:'🗳️',label:'Voter ID',w:85.6,h:53.98,desc:'Card-size print preset.'},
- eShram:{icon:'👷',label:'e-Shram Card',w:85.6,h:53.98,desc:'Card-size print preset.'},
- ABHA:{icon:'🩺',label:'ABHA Card',w:85.6,h:53.98,desc:'Card-size print preset.'},
- DL:{icon:'🚗',label:'Driving Licence',w:85.6,h:53.98,desc:'Card-size print preset.'},
- Passport:{icon:'📸',label:'Passport Photo',w:35,h:45,desc:'35 × 45 mm photo preset.'},
- Stamp:{icon:'📸',label:'Stamp Photo',w:25,h:25,desc:'25 × 25 mm photo preset.'},
- Visa:{icon:'📸',label:'Visa Photo',w:35,h:45,desc:'Photo preset; requirements vary by visa/country.'},
- Signature:{icon:'✍️',label:'Signature',w:50,h:20,desc:'50 × 20 mm working preset; adjust for the target form if required.'},
- A4:{icon:'📄',label:'A4 Document',w:190,h:277,desc:'A4 printable area preset.'},
- Other:{icon:'🪪',label:'Other ID Card',w:85.6,h:53.98,desc:'Generic card-size preset.'}
-};
-let currentImage=null,currentPdf=null,pdfLib=null;
-const presetEl=document.getElementById('preset');
-Object.entries(presets).forEach(([key,p])=>{const o=document.createElement('option');o.value=key;o.textContent=p.icon+' '+p.label;presetEl.appendChild(o)});
-const grid=document.getElementById('serviceGrid');
-Object.entries(presets).forEach(([key,p])=>{const d=document.createElement('div');d.className='service-card';d.dataset.name=(p.label+' '+key).toLowerCase();d.innerHTML=`<div class="icon">${p.icon}</div><h3>${p.label}</h3><button onclick="selectPreset('${key}')">Open Print</button>`;grid.appendChild(d)});
-function selectPreset(key){presetEl.value=key;updatePreset();document.getElementById('tools').scrollIntoView({behavior:'smooth'})}
-function updatePreset(){const p=presets[presetEl.value];document.getElementById('presetInfo').innerHTML=`<b>${p.label}</b><br>Preset: ${p.w} × ${p.h} mm<br>${p.desc}`;const photo=['Passport','Stamp','Visa'].includes(presetEl.value);document.getElementById('photoControls').classList.toggle('hidden',!photo);renderImageLayout()}
-function changeCopies(n){let x=Math.max(1,Math.min(100,(parseInt(document.getElementById('copies').value)||1)+n));document.getElementById('copies').value=x;renderImageLayout()}
-function filterServices(){const q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.service-card').forEach(c=>c.style.display=!q||c.dataset.name.includes(q)?'block':'none');document.getElementById('services').scrollIntoView({behavior:'smooth'})}
-function loadFile(e){const f=e.target.files[0];if(!f)return;if(f.type==='application/pdf'||f.name.toLowerCase().endsWith('.pdf')){currentImage=null;document.getElementById('pdfControls').classList.remove('hidden');document.getElementById('photoControls').classList.add('hidden');loadPdf(f)}else{currentPdf=null;document.getElementById('pdfControls').classList.add('hidden');const r=new FileReader();r.onload=ev=>{currentImage=ev.target.result;updatePreset()};r.readAsDataURL(f)}}
-async function loadPdf(file){const a=await file.arrayBuffer();try{if(!pdfLib)pdfLib=await import('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs');pdfLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';currentPdf=await pdfLib.getDocument({data:a}).promise;renderPdf()}catch(err){alert('PDF load नहीं हो पाया। Internet connection check करें।');console.error(err)}}
-function parsePages(max){const raw=document.getElementById('pageRange').value.trim();if(!raw)return Array.from({length:max},(_,i)=>i+1);const set=new Set();raw.split(',').forEach(part=>{part=part.trim();if(part.includes('-')){let [a,b]=part.split('-').map(Number);a=Math.max(1,a);b=Math.min(max,b);for(let i=Math.min(a,b);i<=Math.max(a,b);i++)set.add(i)}else{let n=Number(part);if(n>=1&&n<=max)set.add(n)}});return [...set].sort((a,b)=>a-b)}
-async function renderPdf(){if(!currentPdf)return;const box=document.getElementById('a4');box.innerHTML='';const pages=parsePages(currentPdf.numPages);for(const n of pages){const page=await currentPdf.getPage(n);const viewport=page.getViewport({scale:1.3});const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');canvas.width=viewport.width;canvas.height=viewport.height;await page.render({canvasContext:ctx,viewport}).promise;const wrap=document.createElement('div');wrap.className='pdf-page';wrap.appendChild(canvas);box.appendChild(wrap)}document.getElementById('paperLabel').textContent=`PDF • ${pages.length} page(s)`}
-function renderImageLayout(){const box=document.getElementById('a4');box.innerHTML='';if(!currentImage){document.getElementById('paperLabel').textContent='A4 • Portrait';return}const p=presets[presetEl.value];const copies=Math.max(1,parseInt(document.getElementById('copies').value)||1);const item=document.createElement('div');item.className='preview-item';item.style.width=`${p.w}mm`;item.style.height=`${p.h}mm`;for(let i=0;i<copies;i++){const x=item.cloneNode(false);const img=document.createElement('img');img.src=currentImage;x.appendChild(img);box.appendChild(x)}document.getElementById('paperLabel').textContent=`A4 • ${copies} copy/copies`}
+<header><div class="wrap nav"><div class="logo">🖥️ Digital Seva Center</div><nav><a href="#services">Services</a><a href="#tools">Tools</a><a href="#contact">Contact</a><button class="btn" onclick="openAdmin()">Admin</button></nav></div></header>
 
-function applyPhotoEdits(){if(!currentImage)return;const color=document.getElementById('bgColor').value;if(color==='none'){renderImageLayout();return}const mode=document.getElementById('bgMode').value;const img=new Image();img.onload=()=>{const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d');ctx.drawImage(img,0,0);const data=ctx.getImageData(0,0,c.width,c.height);const d=data.data;const target=hexRgb(color);const samples=[[0,0],[c.width-1,0],[0,c.height-1],[c.width-1,c.height-1]];let sr=0,sg=0,sb=0;samples.forEach(([x,y])=>{const i=(y*c.width+x)*4;sr+=d[i];sg+=d[i+1];sb+=d[i+2]});sr/=4;sg/=4;sb/=4;for(let y=0;y<c.height;y++){for(let x=0;x<c.width;x++){const i=(y*c.width+x)*4;const dist=Math.hypot(d[i]-sr,d[i+1]-sg,d[i+2]-sb);if(mode==='replace' && dist<55 || mode==='solid' && (x<Math.max(2,c.width*.035)||x>c.width-Math.max(2,c.width*.035)||y<Math.max(2,c.height*.035)||y>c.height-Math.max(2,c.height*.035))){d[i]=target[0];d[i+1]=target[1];d[i+2]=target[2];}}}ctx.putImageData(data,0,0);currentImage=c.toDataURL('image/jpeg',.95);renderImageLayout()};img.src=currentImage}
-function hexRgb(hex){const n=parseInt(hex.slice(1),16);return[(n>>16)&255,(n>>8)&255,n&255]}
-function resetTool(){currentImage=null;currentPdf=null;document.getElementById('file').value='';document.getElementById('a4').innerHTML='';document.getElementById('pageRange').value='';document.getElementById('pdfControls').classList.add('hidden');document.getElementById('photoControls').classList.add('hidden');document.getElementById('bgColor').value='none';document.getElementById('bgMode').value='solid';document.getElementById('copies').value=1;updatePreset()}
-updatePreset();
+<div class="hero"><div class="wrap">
+<div class="muted">एक ही जगह पर आपकी डिजिटल सेवाएँ</div><h1>Online Service & Print Center</h1>
+<p>Document print, photo, PDF, government service links और कई digital tools.</p>
+<div class="search"><input id="search" placeholder="Aadhaar, PAN, Passport Photo, PDF... खोजें" oninput="renderServices()"><button class="btn" onclick="document.getElementById('services').scrollIntoView()">Search</button></div>
+</div></div>
+
+<main id="services" class="wrap">
+<section><div class="title"><h2>🪪 ID & Card Services</h2></div><div id="serviceGrid" class="grid"></div></section>
+
+<section id="tools"><div class="title"><h2>🛠️ Quick Tools</h2></div>
+<div class="grid">
+<div class="card" onclick="openTool('photo')"><div class="icon">📸</div><h3>Passport Photo</h3><div class="muted">35×45 mm, copies & background</div></div>
+<div class="card" onclick="openTool('frame')"><div class="icon">🖼️</div><h3>Photo Frame Print</h3><div class="muted">4×6 to 18×24 inch</div></div>
+<div class="card" onclick="openTool('pdf')"><div class="icon">📄</div><h3>PDF Print</h3><div class="muted">Pages, copies & A4 preview</div></div>
+<div class="card" onclick="openTool('document')"><div class="icon">📝</div><h3>A4 Document Print</h3><div class="muted">Image/PDF print layout</div></div>
+</div></section>
+
+<section><div class="title"><h2>🏛️ Other Online Services</h2></div><div class="grid" id="otherGrid"></div></section>
+</main>
+
+<footer id="contact"><div class="wrap"><h2>Digital Seva Center</h2><p>Online services, document printing और photo services.</p><p>📞 WhatsApp: <span id="waText">+91 00000 00000</span></p></div></footer>
+
+<div id="toolModal" class="modal"><div class="modalbox"><button class="close" onclick="closeModal('toolModal')">✕</button><h2 id="toolTitle">Tool</h2><p id="toolDesc" class="muted"></p>
+<div class="drop"><input id="fileInput" type="file" accept="image/*,.pdf"><p>Image या PDF upload करें</p></div>
+<div class="controls">
+<label>Size<select id="size"><option>Auto</option><option>A4</option><option>35 × 45 mm</option><option>4 × 6 inch</option><option>6 × 8 inch</option><option>8 × 10 inch</option><option>8 × 12 inch</option><option>12 × 18 inch</option><option>18 × 24 inch</option></select></label>
+<label>Copies<input id="copies" type="number" min="1" value="1"></label>
+<label>Background<select id="bg"><option>Original</option><option>White</option><option>Light Blue</option><option>Blue</option><option>Light Grey</option></select></label>
+</div>
+<div class="preview" id="preview">Upload a file to see preview</div>
+<div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn" onclick="window.print()">🖨️ Print</button><button class="btn" onclick="alert('Browser print dialog से Save as PDF चुनें.')">⬇️ Save PDF</button></div>
+</div></div>
+
+<div id="adminModal" class="modal"><div class="modalbox"><button class="close" onclick="closeModal('adminModal')">✕</button><h2>⚙️ Admin Panel</h2><p class="muted">Demo admin panel — production में secure server-side login/database जोड़ें.</p>
+<div class="controls"><label>WhatsApp Number<input id="waInput" value="+91 00000 00000"></label><label>New Service<input id="newService" placeholder="जैसे Birth Certificate"></label><label>Price<input id="newPrice" placeholder="₹50"></label></div>
+<button class="btn" style="margin-top:15px" onclick="addService()">+ Service Add</button>
+<hr style="margin:22px 0"><div id="adminList"></div>
+</div></div>
+
+<script>
+let services=[
+['🪪','Aadhaar Card Print','PDF/Image → automatic card layout','ID'],
+['💳','PAN Card Print','PDF/Image → automatic card layout','ID'],
+['🏥','Ayushman Card Print','Card print layout','ID'],
+['🗳️','Voter ID Print','Card print layout','ID'],
+['👷','e-Shram Card Print','Card print layout','ID'],
+['🩺','ABHA Card Print','Card print layout','ID'],
+['🚗','Driving Licence Print','Card/document layout','ID'],
+['🧾','Ration Card Print','Document print','ID'],
+['🎓','Student ID Print','Custom ID layout','ID'],
+['📑','Certificate Print','A4 certificate print','OTHER'],
+['🎓','Scholarship / Education','Official portal assistance','OTHER'],
+['💼','Job / Recruitment Form','Official application assistance','OTHER'],
+['🏛️','Government Scheme','Eligibility & official links','OTHER'],
+['💳','Recharge / Bill Payment','Available digital services','OTHER'],
+['🖨️','Scan / Xerox / Print','Color & B/W print','OTHER']
+];
+const $=id=>document.getElementById(id);
+function renderServices(){
+ let q=$('search').value.toLowerCase();
+ $('serviceGrid').innerHTML=services.filter(x=>x[3]=='ID' && (x.join(' ').toLowerCase().includes(q))).map(x=>card(x)).join('');
+ $('otherGrid').innerHTML=services.filter(x=>x[3]=='OTHER' && (x.join(' ').toLowerCase().includes(q))).map(x=>card(x)).join('');
+ renderAdmin();
+}
+function card(x){return `<div class="card" onclick="openTool('document','${x[1]}')"><div class="icon">${x[0]}</div><h3>${x[1]}</h3><div class="muted">${x[2]}</div><div class="price">Open →</div></div>`}
+function openTool(type,name){
+ $('toolModal').style.display='block';
+ $('toolTitle').textContent=name || ({photo:'📸 Passport Photo',frame:'🖼️ Photo Frame Print',pdf:'📄 PDF Print',document:'📝 Document Print'}[type]);
+ $('toolDesc').textContent= type==='photo'?'35×45 mm passport photo, background and copies.':type==='frame'?'Choose frame size and print layout.':type==='pdf'?'Upload PDF, choose pages/copies and print.':'Upload PDF/Image and print using the selected preset.';
+}
+function closeModal(id){$(id).style.display='none'}
+$('fileInput').addEventListener('change',e=>{
+ let f=e.target.files[0]; if(!f)return;
+ $('preview').innerHTML=`<b>${f.name}</b><br><span class="muted">${(f.size/1024/1024).toFixed(2)} MB</span><br><br>Preview तैयार है — Print दबाएँ।`;
+});
+function openAdmin(){ $('adminModal').style.display='block'; renderAdmin(); }
+function addService(){let n=$('newService').value.trim();if(!n)return;services.push(['➕',n,'Admin added service','OTHER']);$('newService').value='';renderServices();alert('Service added');}
+function renderAdmin(){if(!$('adminList'))return;$('adminList').innerHTML=services.map((x,i)=>`<div style="padding:9px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between"><span>${x[0]} ${x[1]}</span><button onclick="delService(${i})">Delete</button></div>`).join('')}
+function delService(i){services.splice(i,1);renderServices()}
+$('waInput').addEventListener('input',e=>$('waText').textContent=e.target.value);
+renderServices();
 </script>
 </body></html>
